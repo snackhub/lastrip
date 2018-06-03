@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message Request {
+  int32 Version = 1;
+  bytes Command = 2;
+  repeated bytes Parameters = 3;
+}
+
+message Response {
+  int32 Version = 1;
+  bytes Content = 2;
+}

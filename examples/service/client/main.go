@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/snackhub/lastrip"
+	"github.com/snackhub/lastrip/misc"
 )
 
 func main() {
@@ -29,7 +30,7 @@ func main() {
 		if len(data) == 0 {
 			continue
 		}
-		params, err := lastrip.ParseSliceToSlices(data)
+		params, err := misc.ParseSliceToSlices(data)
 		fmt.Fprintf(os.Stdout, "[debug] params: %v\n", params)
 		if err != nil {
 			fmt.Fprintf(os.Stdout, "invalid input: %v\n", err)
